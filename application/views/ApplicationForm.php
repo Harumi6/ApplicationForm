@@ -599,7 +599,51 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</fieldset>
 
 										<fieldset class="wizard-step d-none" data-step="5">
-											<h2 class="h5 mb-3">Review &amp; confirm</h2>
+											<div class="table-responsive mb-4">
+												<table class="table table-bordered table-sm align-middle text-start">
+													<thead>
+														<tr>
+															<th colspan="4" class="fw-bold">ประวัติการฝึกอบรม-สัมมนา / Training Course and seminar</th>
+														</tr>
+														<tr class="text-center align-middle">
+															<th class="fw-bold" style="width: 25%;">ชื่อสถาบัน/ <span class="fw-normal">Institute's name</span></th>
+															<th class="fw-bold" style="width: 35%;">หัวข้อการฝึกอบรม/ <span class="fw-normal">Course's name</span></th>
+															<th class="fw-bold" style="width: 20%;">ระยะเวลา/ <span class="fw-normal">Period</span></th>
+															<th class="fw-bold" style="width: 20%;">วัน/เดือน/ปี <span class="fw-normal">Date/Month/Year</span></th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td><input type="text" class="form-control form-control-sm" name="train1_institute"></td>
+															<td><input type="text" class="form-control form-control-sm" name="train1_course"></td>
+															<td><input type="text" class="form-control form-control-sm" name="train1_period"></td>
+															<td><input type="text" class="form-control form-control-sm" name="train1_date"></td>
+														</tr>
+														<tr>
+															<td><input type="text" class="form-control form-control-sm" name="train2_institute"></td>
+															<td><input type="text" class="form-control form-control-sm" name="train2_course"></td>
+															<td><input type="text" class="form-control form-control-sm" name="train2_period"></td>
+															<td><input type="text" class="form-control form-control-sm" name="train2_date"></td>
+														</tr>
+														<tr>
+															<td><input type="text" class="form-control form-control-sm" name="train3_institute"></td>
+															<td><input type="text" class="form-control form-control-sm" name="train3_course"></td>
+															<td><input type="text" class="form-control form-control-sm" name="train3_period"></td>
+															<td><input type="text" class="form-control form-control-sm" name="train3_date"></td>
+														</tr>
+														<tr>
+															<td><input type="text" class="form-control form-control-sm" name="train4_institute"></td>
+															<td><input type="text" class="form-control form-control-sm" name="train4_course"></td>
+															<td><input type="text" class="form-control form-control-sm" name="train4_period"></td>
+															<td><input type="text" class="form-control form-control-sm" name="train4_date"></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</fieldset>
+
+										<fieldset class="wizard-step d-none" data-step="6">
+											<h2 class="h5 mb-3">Interview</h2>
 											<dl class="row mb-3" id="wz-summary"></dl>
 											<div class="form-check">
 												<input class="form-check-input" type="checkbox" id="wz-terms" required />
@@ -609,7 +653,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 												<div class="invalid-feedback">You must accept the terms to continue.</div>
 											</div>
 										</fieldset>
-
 
 										<!-- Navigation -->
 										<div class="d-flex justify-content-between mt-4">
