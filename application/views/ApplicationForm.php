@@ -175,8 +175,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										<li data-step="6"></li>
 										<li data-step="7"></li>
 										<li data-step="8"></li>
-										<li data-step="9"></li>
-
 									</ol>
 
 									<!-- Form -->
@@ -923,6 +921,32 @@ defined('BASEPATH') or exit('No direct script access allowed');
 												</div>
 											</div>
 										</fieldset>
+
+										<fieldset class="wizard-step d-none" data-step="8">
+											<h2 class="h5 mb-3">แนบเอกสารและข้อตกลง (Attach the documents and agreement.) </h2><hr>
+											<dl class="row mb-3" id="wz-summary"></dl>
+											<div class="form-check">
+												<small>ข้าพเจ้าขอรับรองว่า ข้อความดังกล่าวทั้งหมดในใบสมัครนี้เป็นความจริงทุกประการ หากหลังจากบริษัทฯจ้างเข้ามาทำงานตรวจสอบเอกสารที่นำมาสมัครงานไม่เป็นความจริง และไม่ปฏิบัติตามกฎระเบียบของบริษัท ทางบริษัทมีสิทธิเลิกจ้างข้าพเจ้าโดยไม่ต้องจ่ายเงินชดเชย หรือค่าเสียหายใดๆ ทั้งสิ้น</small><br><hr>
+												<small>I certify the information contained in this application is true. Any misrepresentation or omissions of any fact in my application can be justification for refusal of employment or for refusal of employment or if employed grounds for termination. I understand that my employment may be terminated with or without cause or notice, at any time, at the option of either the Company or myself.</small><hr>
+												<input class="form-check-input" type="checkbox" id="wz-terms" required />
+												<label class="form-check-label" for="wz-terms">
+													I agree to the <a href="#">terms of service</a>.
+												</label>
+												<div class="invalid-feedback">You must accept the terms to continue.</div>
+											</div>
+										</fieldset>
+
+										<!-- <fieldset class="wizard-step d-none" data-step="9">
+											<h2 class="h5 mb-3">Interview</h2>
+											<dl class="row mb-3" id="wz-summary"></dl>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="wz-terms" required />
+												<label class="form-check-label" for="wz-terms">
+													I agree to the <a href="#">terms of service</a>.
+												</label>
+												<div class="invalid-feedback">You must accept the terms to continue.</div>
+											</div>
+										</fieldset> -->
 
 										<!-- Navigation -->
 										<div class="d-flex justify-content-between mt-4">
