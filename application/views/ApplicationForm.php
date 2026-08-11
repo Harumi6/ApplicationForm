@@ -228,9 +228,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 												<div class="col-md-2">
 													<label class="form-label" for="inlineSelect">คำนำหน้าชื่อ <span class="text-danger">*</span></label>
 													<select class="form-select" id="inlineSelect" name="title" required>
-														<option selected value="0">นาย</option>
-														<option value="1">นาง</option>
-														<option value="2">นางสาว</option>
+														<option selected value="0">นาย (Mr.)</option>
+														<option value="1">นาง (Mrs.)</option>
+														<option value="2">นางสาว (Miss)</option>
 													</select>
 												</div>
 												<div class="col-md-5">
@@ -643,6 +643,139 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</fieldset>
 
 										<fieldset class="wizard-step d-none" data-step="6">
+											<h2 class="h5 mb-3 text-white">ความสามารถ / Ability</h2>
+											<hr>
+											
+											<!-- Row 1: Computer -->
+											<div class="row mb-3">
+												<div class="col-md-3">
+													<div class="fw-bold text-white">ความสามารถทางคอมฯ โปรแกรม</div>
+													<div class="text-white" style="font-size: 13px;">Computer skill</div>
+												</div>
+												<div class="col-md-9">
+													<div class="d-flex flex-wrap align-items-start gap-3">
+														<div class="form-check mb-0">
+															<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="comp_word" id="comp_word">
+															<label class="form-check-label fw-bold text-white" for="comp_word">Ms.Word</label>
+														</div>
+														<div class="form-check mb-0">
+															<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="comp_excel" id="comp_excel">
+															<label class="form-check-label fw-bold text-white" for="comp_excel">Ms.Excel</label>
+														</div>
+														<div class="form-check mb-0">
+															<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="comp_powerpoint" id="comp_powerpoint">
+															<label class="form-check-label fw-bold text-white" for="comp_powerpoint">Ms.Power Point</label>
+														</div>
+														<div class="d-flex align-items-start">
+															<div class="form-check mb-0 me-2">
+																<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="comp_other_check" id="comp_other_check">
+																<label class="form-check-label fw-bold text-white" for="comp_other_check">อื่นๆ</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">Others</div>
+															</div>
+															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="comp_other" style="width: 250px; background-color: #efefef; ">
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Row 2: English -->
+											<div class="row mb-3">
+												<div class="col-md-3">
+													<div class="fw-bold text-white">ความสามารถทางภาษา อังกฤษ</div>
+													<div class="text-white" style="font-size: 13px;">English skill</div>
+												</div>
+												<div class="col-md-9">
+													<div class="d-flex flex-wrap align-items-start gap-4">
+														<div class="d-flex align-items-start gap-3">
+															<div class="form-check mb-0">
+																<input class="form-check-input shadow-none border-secondary" type="radio" name="eng_skill" id="eng_excellent" value="excellent" checked>
+																<label class="form-check-label fw-bold text-white" for="eng_excellent">ดีมาก</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">Excellent</div>
+															</div>
+															<div class="form-check mb-0">
+																<input class="form-check-input shadow-none border-secondary" type="radio" name="eng_skill" id="eng_good" value="good">
+																<label class="form-check-label fw-bold text-white" for="eng_good">ดี</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">Good</div>
+															</div>
+															<div class="form-check mb-0">
+																<input class="form-check-input shadow-none border-secondary" type="radio" name="eng_skill" id="eng_fair" value="fair">
+																<label class="form-check-label fw-bold text-white" for="eng_fair">พอใช้</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
+															</div>
+														</div>
+														
+														<div class="d-flex align-items-start">
+															<div class="me-2 text-nowrap">
+																<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_check" id="other_lang_check" value="other">
+																<div class="fw-bold text-white">ภาษาอื่นๆ (ระบุ)</div>
+																<div class="text-white" style="font-size: 13px;">Other languages (Please specify)</div>
+															</div>
+															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="other_lang_name" style="width: 150px; background-color: #fdf2fa;">
+														</div>
+
+														<div class="d-flex align-items-start gap-3">
+															<div class="form-check mb-0">
+																<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_skill" id="other_lang_excellent" value="excellent">
+																<label class="form-check-label fw-bold text-white" for="other_lang_excellent">ดีมาก</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">Excellent</div>
+															</div>
+															<div class="form-check mb-0">
+																<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_skill" id="other_lang_good" value="good">
+																<label class="form-check-label fw-bold text-white" for="other_lang_good">ดี</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">Good</div>
+															</div>
+															<div class="form-check mb-0">
+																<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_skill" id="other_lang_fair" value="fair">
+																<label class="form-check-label fw-bold text-white" for="other_lang_fair">พอใช้</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Row 3: Driving -->
+											<div class="row mb-3">
+												<div class="col-md-3">
+													<div class="fw-bold text-white">ความสามารถในการขับขี่</div>
+													<div class="text-white" style="font-size: 13px;">Driving ability</div>
+												</div>
+												<div class="col-md-9">
+													<div class="d-flex flex-wrap align-items-start gap-4">
+														<div class="d-flex align-items-start gap-3">
+															<div class="form-check mb-0">
+																<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="drive_car" id="drive_car">
+																<label class="form-check-label fw-bold text-white" for="drive_car">รถยนต์</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">Car</div>
+															</div>
+															<div class="form-check mb-0">
+																<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="drive_motorcycle" id="drive_motorcycle">
+																<label class="form-check-label fw-bold text-white" for="drive_motorcycle">รถจักรยานยนต์</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">Motorcycle</div>
+															</div>
+														</div>
+														
+														<div class="d-flex align-items-start">
+															<div class="me-2 text-nowrap">
+																<div class="fw-bold text-white">อื่นๆ</div>
+																<div class="text-white" style="font-size: 13px;">Other</div>
+															</div>
+															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="drive_other" style="width: 180px; background-color: #fdf2fa;">
+														</div>
+														
+														<div class="d-flex align-items-start">
+															<div class="me-2 text-nowrap">
+																<div class="fw-bold text-white">ใบขับขี่รถหมายเลข</div>
+																<div class="text-white" style="font-size: 13px;">Driven License NO.</div>
+															</div>
+															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="drive_license_no" style="width: 200px; background-color: #fdf2fa;">
+														</div>
+													</div>
+												</div>
+											</div>
+										</fieldset>
+
+										<fieldset class="wizard-step d-none" data-step="7">
 											<h2 class="h5 mb-3">Interview</h2>
 											<dl class="row mb-3" id="wz-summary"></dl>
 											<div class="form-check">
@@ -651,7 +784,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 													I agree to the <a href="#">terms of service</a>.
 												</label>
 												<div class="invalid-feedback">You must accept the terms to continue.</div>
-											</div>
+											</div>	
 										</fieldset>
 
 										<!-- Navigation -->
