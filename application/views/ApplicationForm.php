@@ -74,7 +74,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!--end::Required Plugin(AdminLTE)-->
 
 	<style>
-		body, .form-control, .form-select, .btn, h1, h2, h3, h4, h5, h6 {
+		body,
+		.form-control,
+		.form-select,
+		.btn,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
 			font-family: 'Google Sans', 'Noto Sans Thai', sans-serif !important;
 		}
 
@@ -235,11 +244,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 												</div>
 												<div class="col-md-5">
 													<label class="form-label" for="wz-thai_name"> ชื่อ - นามสกุล (ภาษาไทย) <span class="text-danger">*</span></label>
-													<input type="text" class="form-control" id="wz-thai_name" name="thai_name"  />
+													<input type="text" class="form-control" id="wz-thai_name" name="thai_name" />
 												</div>
 												<div class="col-md-5">
 													<label class="form-label" for="wz-eng_name"> Name - Surname (English) <span class="text-danger">*</span></label>
-													<input type="text" class="form-control" id="wz-eng_name" name="eng_name"  />
+													<input type="text" class="form-control" id="wz-eng_name" name="eng_name" />
 												</div>
 
 												<!-- Row 2: Physical & Birth -->
@@ -314,19 +323,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 												</div>
 												<div class="col-md-4">
 													<label class="form-label" for="wz-phone"> เบอร์โทรศัพท์ที่ติดต่อได้สะดวก <span class="text-danger">*</span></label>
-													<input type="text" class="form-control" id="wz-phone" name="phone"  />
+													<input type="text" class="form-control" id="wz-phone" name="phone" />
 												</div>
 
 												<!-- Row 5: Contact -->
 												<div class="col-md-12 mt-4">
 													<label class="form-label" for="wz-address"> ที่อยู่ปัจจุบันของผู้สมัครซึ่งติดต่อได้สะดวก (Present Address) <span class="text-danger">*</span></label>
-													<textarea class="form-control" id="wz-address" name="address" rows="1" ></textarea>
+													<textarea class="form-control" id="wz-address" name="address" rows="1"></textarea>
 												</div>
 
 												<!-- Row 3: Military Status -->
 												<div class="col-md-12 mt-4">
 													<label class="form-label d-block mb-3 fw-bold"> สถานภาพทางทหาร </label>
-													
+
 													<div class="row align-items-center mb-2">
 														<div class="col-auto">
 															<div class="form-check">
@@ -338,7 +347,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 															<input type="number" class="form-control form-control-sm" name="military_rotc_year" placeholder="ระบุปี (เช่น 3)">
 														</div>
 													</div>
-													
+
 													<div class="row align-items-center mb-2">
 														<div class="col-auto">
 															<div class="form-check">
@@ -347,7 +356,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 															</div>
 														</div>
 													</div>
-													
+
 													<div class="row align-items-center mb-2">
 														<div class="col-auto">
 															<div class="form-check">
@@ -645,7 +654,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										<fieldset class="wizard-step d-none" data-step="6">
 											<h2 class="h5 mb-3 text-white">ความสามารถ / Ability</h2>
 											<hr>
-											
+
 											<!-- Row 1: Computer -->
 											<div class="row mb-3">
 												<div class="col-md-3">
@@ -703,7 +712,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 																<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
 															</div>
 														</div>
-														
+
 														<div class="d-flex align-items-start">
 															<div class="me-2 text-nowrap">
 																<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_check" id="other_lang_check" value="other">
@@ -754,7 +763,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 																<div class="text-white" style="font-size: 13px; line-height: 1;">Motorcycle</div>
 															</div>
 														</div>
-														
+
 														<div class="d-flex align-items-start">
 															<div class="me-2 text-nowrap">
 																<div class="fw-bold text-white">อื่นๆ</div>
@@ -762,13 +771,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 															</div>
 															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="drive_other" style="width: 180px; background-color: #fdf2fa;">
 														</div>
-														
+
 														<div class="d-flex align-items-start">
 															<div class="me-2 text-nowrap">
 																<div class="fw-bold text-white">ใบขับขี่รถหมายเลข</div>
 																<div class="text-white" style="font-size: 13px;">Driven License NO.</div>
 															</div>
-															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="drive_license_no" style="width: 200px; background-color: #fdf2fa;">
+															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="drive_license_no" style="width: 200px; background-color: #fdf2fa;" maxlength="8">
 														</div>
 													</div>
 												</div>
@@ -784,7 +793,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 													I agree to the <a href="#">terms of service</a>.
 												</label>
 												<div class="invalid-feedback">You must accept the terms to continue.</div>
-											</div>	
+											</div>
 										</fieldset>
 
 										<!-- Navigation -->
