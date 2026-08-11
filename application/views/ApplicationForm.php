@@ -686,6 +686,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 													</div>
 												</div>
 											</div>
+											<hr>
 
 											<!-- Row 2: English -->
 											<div class="row mb-3">
@@ -711,16 +712,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 																<label class="form-check-label fw-bold text-white" for="eng_fair">พอใช้</label>
 																<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
 															</div>
-														</div>
+														</div><br>
 
-														<div class="d-flex align-items-start">
+														<!-- <div class="d-flex align-items-start">
 															<div class="me-2 text-nowrap">
-																<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_check" id="other_lang_check" value="other">
 																<div class="fw-bold text-white">ภาษาอื่นๆ (ระบุ)</div>
 																<div class="text-white" style="font-size: 13px;">Other languages (Please specify)</div>
 															</div>
 															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="other_lang_name" style="width: 150px; background-color: #fdf2fa;">
+														</div> -->
+
+														<div class="me-2 text-nowrap">
+															<div class="fw-bold text-white">ภาษาอื่นๆ (ระบุ)</div>
+															<div class="text-white" style="font-size: 13px;">Other languages (Please specify)</div>
 														</div>
+														<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="other_lang_name" style="width: 150px; background-color: #fdf2fa;">
 
 														<div class="d-flex align-items-start gap-3">
 															<div class="form-check mb-0">
@@ -742,6 +748,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 													</div>
 												</div>
 											</div>
+											<hr>
 
 											<!-- Row 3: Driving -->
 											<div class="row mb-3">
@@ -772,27 +779,148 @@ defined('BASEPATH') or exit('No direct script access allowed');
 															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="drive_other" style="width: 180px; background-color: #fdf2fa;">
 														</div>
 
-														<div class="d-flex align-items-start">
-															<div class="me-2 text-nowrap">
-																<div class="fw-bold text-white">ใบขับขี่รถหมายเลข</div>
-																<div class="text-white" style="font-size: 13px;">Driven License NO.</div>
-															</div>
-															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="drive_license_no" style="width: 200px; background-color: #fdf2fa;" maxlength="8">
-														</div>
 													</div>
 												</div>
 											</div>
 										</fieldset>
 
 										<fieldset class="wizard-step d-none" data-step="7">
-											<h2 class="h5 mb-3">Interview</h2>
-											<dl class="row mb-3" id="wz-summary"></dl>
-											<div class="form-check">
-												<input class="form-check-input" type="checkbox" id="wz-terms" required />
-												<label class="form-check-label" for="wz-terms">
-													I agree to the <a href="#">terms of service</a>.
-												</label>
-												<div class="invalid-feedback">You must accept the terms to continue.</div>
+											<h2 class="h5 mb-3 text-white">ข้อมูลอื่นๆ / Other Information</h2>
+
+											<!-- Question 1 -->
+											<div class="row mb-3 align-items-center">
+												<div class="col-md-7">
+													<div class="fw-bold text-white">ท่านเคยผ่านการสัมภาษณ์งานในกลุ่มบริษัทไอชิน ทาคาโอกะ (ประเทศไทย) จำกัดหรือไม่</div>
+													<div class="text-white" style="font-size: 13px;">Have you ever been interviewed with company in AISIN group before?</div>
+												</div>
+												<div class="col-md-5">
+													<div class="d-flex flex-wrap align-items-center gap-4 mt-2 mt-md-0">
+														<div class="form-check mb-0">
+															<input class="form-check-input shadow-none border-secondary" type="radio" name="aisin_interview" id="aisin_yes" value="yes">
+															<label class="form-check-label fw-bold text-white" for="aisin_yes">เคย โปรดระบุ</label>
+															<div class="text-white" style="font-size: 13px; line-height: 1;">Yes (Please specify)</div>
+														</div>
+														<div class="form-check mb-0">
+															<input class="form-check-input shadow-none border-secondary" type="radio" name="aisin_interview" id="aisin_no" value="no" checked>
+															<label class="form-check-label fw-bold text-white" for="aisin_no">ไม่เคย</label>
+															<div class="text-white" style="font-size: 13px; line-height: 1;">No</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!-- Company Checkboxes -->
+											<div class="row mb-4">
+												<div class="col-12">
+													<div class="d-flex flex-wrap align-items-center gap-4">
+														<div class="form-check d-flex align-items-center mb-0">
+															<input class="form-check-input shadow-none border-secondary mt-0 me-2" type="checkbox" name="company_tep" id="company_tep">
+															<label class="form-check-label text-white d-flex align-items-center" for="company_tep">
+																บริษัท ผลิตภัณฑ์วิศวไทย จำกัด
+																<img src="<?= base_url('assets/images/tep.png') ?>" alt="TEP" height="24" class="ms-2">
+															</label>
+														</div>
+														<div class="form-check d-flex align-items-center mb-0">
+															<input class="form-check-input shadow-none border-secondary mt-0 me-2" type="checkbox" name="company_snf" id="company_snf">
+															<label class="form-check-label text-white d-flex align-items-center" for="company_snf">
+																บริษัท นวโลหะไทย จำกัด
+																<img src="<?= base_url('assets/images/snf.png') ?>" alt="SNF" height="24" class="ms-2">
+															</label>
+														</div>
+														<div class="form-check d-flex align-items-center mb-0">
+															<input class="form-check-input shadow-none border-secondary mt-0 me-2" type="checkbox" name="company_nic" id="company_nic">
+															<label class="form-check-label text-white d-flex align-items-center" for="company_nic">
+																บริษัท นวโลหะอุตสาหกรรม จำกัด
+																<img src="<?= base_url('assets/images/nic.png') ?>" alt="NIC" height="24" class="ms-2">
+															</label>
+														</div>
+													</div>
+													<div class="d-flex flex-wrap align-items-center gap-4 mt-3">
+														<div class="form-check d-flex align-items-center mb-0">
+															<input class="form-check-input shadow-none border-secondary mt-0 me-2" type="checkbox" name="company_sati" id="company_sati">
+															<label class="form-check-label text-white d-flex align-items-center" for="company_sati">
+																บริษัท สยาม เอที อุตสาหกรรม จำกัด
+																<img src="<?= base_url('assets/images/sati.png') ?>" alt="SATI" height="24" class="ms-2">
+															</label>
+														</div>
+														<div class="form-check d-flex align-items-center mb-0">
+															<input class="form-check-input shadow-none border-secondary mt-0 me-2" type="checkbox" name="company_atfb" id="company_atfb">
+															<label class="form-check-label text-white d-flex align-items-center" for="company_atfb">
+																บริษัท ไอชิน ทาคาโอก้า ฟาวดริ บางปะกง จำกัด
+																<img src="<?= base_url('assets/images/atfb.png') ?>" alt="ATFB" height="24" class="ms-2">
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr>
+
+											<!-- Question 2: Health -->
+											<div class="row mb-3 align-items-center">
+												<div class="col-md-12">
+													<div class="d-flex flex-wrap align-items-center gap-4">
+														<div class="me-2">
+															<div class="fw-bold text-white">สุขภาพของท่าน</div>
+															<div class="text-white" style="font-size: 13px;">Your health</div>
+														</div>
+
+														<div class="d-flex align-items-start gap-3 me-3">
+															<div class="form-check mb-0">
+																<input class="form-check-input shadow-none border-secondary" type="radio" name="health_status" id="health_excellent" value="excellent" checked>
+																<label class="form-check-label fw-bold text-white" for="health_excellent">ดีมาก</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">Excellent</div>
+															</div>
+															<div class="form-check mb-0">
+																<input class="form-check-input shadow-none border-secondary" type="radio" name="health_status" id="health_fair" value="fair">
+																<label class="form-check-label fw-bold text-white" for="health_fair">พอใช้</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
+															</div>
+														</div>
+
+														<div class="me-2 text-nowrap">
+															<div class="fw-bold text-white">ท่านมีโรคประจำตัวหรือไม่ ถ้ามี กรุณาระบุ</div>
+															<div class="text-white" style="font-size: 13px;">Do you suffer from any prolonged illness?</div>
+														</div>
+
+														<div class="d-flex align-items-start">
+															<div class="form-check mb-0 me-2">
+																<input class="form-check-input shadow-none border-secondary" type="radio" name="illness" id="illness_yes" value="yes">
+																<label class="form-check-label fw-bold text-white" for="illness_yes">มี โปรดระบุ</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">If "Yes", please specify</div>
+															</div>
+															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="illness_specify" style="width: 200px; background-color: #efefef;">
+														</div>
+
+														<div class="form-check mb-0 ms-2">
+															<input class="form-check-input shadow-none border-secondary" type="radio" name="illness" id="illness_no" value="no" checked>
+															<label class="form-check-label fw-bold text-white" for="illness_no">ไม่มี</label>
+															<div class="text-white" style="font-size: 13px; line-height: 1;">No.</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr>
+
+											<!-- Question 3: Crime -->
+											<div class="row mb-3 align-items-center">
+												<div class="col-md-8">
+													<div class="fw-bold text-white">ท่านเคยถูกจับหรือเคยต้องคดีอาญาหรือคดีเกี่ยวกับการลักขโมยหรือฉ้อโกงหรือไม่</div>
+													<div class="text-white" style="font-size: 13px;">Have you ever been arrested or charged by the Police Department for involvement in any theft of fraud?</div>
+												</div>
+												<div class="col-md-4">
+													<div class="d-flex flex-wrap align-items-center gap-4 mt-2 mt-md-0">
+														<div class="form-check mb-0">
+															<input class="form-check-input shadow-none border-secondary" type="radio" name="crime_record" id="crime_yes" value="yes">
+															<label class="form-check-label fw-bold text-white" for="crime_yes">เคย</label>
+															<div class="text-white" style="font-size: 13px; line-height: 1;">Yes</div>
+														</div>
+														<div class="form-check mb-0">
+															<input class="form-check-input shadow-none border-secondary" type="radio" name="crime_record" id="crime_no" value="no" checked>
+															<label class="form-check-label fw-bold text-white" for="crime_no">ไม่เคย</label>
+															<div class="text-white" style="font-size: 13px; line-height: 1;">No</div>
+														</div>
+													</div>
+												</div>
 											</div>
 										</fieldset>
 

@@ -8,6 +8,8 @@ application/logs/*
 
 !application/*/.htaccess
 
+!assets/images/*
+
 composer.lock
 tests/mocks/database/ci_test.sqlite
 
@@ -29,4 +31,4 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-workspace
 *.sublime-project
 /tests/tests/
-/tests/results/
+/tests/results/ 
