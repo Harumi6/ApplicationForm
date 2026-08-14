@@ -23,7 +23,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/ApplicationForm/';
+
+// ตรวจสอบ HTTP หรือ HTTPS
+$protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? "https" : "http";
+
+// ดึง Host (IP หรือ Domain) และ Path โครงการอัตโนมัติ
+$host = $_SERVER['HTTP_HOST'];
+$path = preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])) . '/';
+
+// รวมเป็น Base URL แบบ Dynamic
+$config['base_url'] = $protocol . "://" . $host . $path;
+
+// $config['base_url'] = 'http://localhost/ApplicationForm/';
 
 /*
 |--------------------------------------------------------------------------
