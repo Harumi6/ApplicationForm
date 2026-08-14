@@ -655,11 +655,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 											<!-- Row 1: Computer -->
 											<div class="row mb-3">
-												<div class="col-md-3">
+												<div class="col-md-4">
 													<div class="fw-bold text-white">ความสามารถทางคอมฯ โปรแกรม</div>
 													<div class="text-white" style="font-size: 13px;">Computer skill</div>
 												</div>
-												<div class="col-md-9">
+												<div class="col-md-8">
 													<div class="d-flex flex-wrap align-items-start gap-3">
 														<div class="form-check mb-0">
 															<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="comp_word" id="comp_word">
@@ -687,61 +687,58 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											<hr>
 
 											<!-- Row 2: English -->
-											<div class="row mb-3">
-												<div class="col-md-3">
-													<div class="fw-bold text-white">ความสามารถทางภาษา อังกฤษ</div>
+											<div class="row mb-3 align-items-center">
+												<div class="col-md-4">
+													<div class="fw-bold text-white">ความสามารถทางภาษาอังกฤษ</div>
 													<div class="text-white" style="font-size: 13px;">English skill</div>
 												</div>
-												<div class="col-md-9">
-													<div class="d-flex flex-wrap align-items-start gap-4">
-														<div class="d-flex align-items-start gap-3">
-															<div class="form-check mb-0">
-																<input class="form-check-input shadow-none border-secondary" type="radio" name="eng_skill" id="eng_excellent" value="excellent" checked>
-																<label class="form-check-label fw-bold text-white" for="eng_excellent">ดีมาก</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">Excellent</div>
-															</div>
-															<div class="form-check mb-0">
-																<input class="form-check-input shadow-none border-secondary" type="radio" name="eng_skill" id="eng_good" value="good">
-																<label class="form-check-label fw-bold text-white" for="eng_good">ดี</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">Good</div>
-															</div>
-															<div class="form-check mb-0">
-																<input class="form-check-input shadow-none border-secondary" type="radio" name="eng_skill" id="eng_fair" value="fair">
-																<label class="form-check-label fw-bold text-white" for="eng_fair">พอใช้</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
-															</div>
-														</div><br>
-
-														<!-- <div class="d-flex align-items-start">
-															<div class="me-2 text-nowrap">
-																<div class="fw-bold text-white">ภาษาอื่นๆ (ระบุ)</div>
-																<div class="text-white" style="font-size: 13px;">Other languages (Please specify)</div>
-															</div>
-															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="other_lang_name" style="width: 150px; background-color: #fdf2fa;">
-														</div> -->
-
-														<div class="me-2 text-nowrap">
-															<div class="fw-bold text-white">ภาษาอื่นๆ (ระบุ)</div>
-															<div class="text-white" style="font-size: 13px;">Other languages (Please specify)</div>
+												<div class="col-md-8">
+													<div class="d-flex align-items-center gap-4">
+														<div class="form-check mb-0">
+															<input class="form-check-input shadow-none border-secondary" type="radio" name="eng_skill" id="eng_excellent" value="excellent" checked>
+															<label class="form-check-label fw-bold text-white" for="eng_excellent">ดีมาก</label>
+															<div class="text-white" style="font-size: 13px; line-height: 1;">Excellent</div>
 														</div>
-														<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="other_lang_name" style="width: 150px; background-color: #fdf2fa;">
+														<div class="form-check mb-0">
+															<input class="form-check-input shadow-none border-secondary" type="radio" name="eng_skill" id="eng_good" value="good">
+															<label class="form-check-label fw-bold text-white" for="eng_good">ดี</label>
+															<div class="text-white" style="font-size: 13px; line-height: 1;">Good</div>
+														</div>
+														<div class="form-check mb-0">
+															<input class="form-check-input shadow-none border-secondary" type="radio" name="eng_skill" id="eng_fair" value="fair">
+															<label class="form-check-label fw-bold text-white" for="eng_fair">พอใช้</label>
+															<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
+														</div>
+													</div>
+												</div>
+											</div>
 
-														<div class="d-flex align-items-start gap-3">
-															<div class="form-check mb-0">
-																<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_skill" id="other_lang_excellent" value="excellent">
-																<label class="form-check-label fw-bold text-white" for="other_lang_excellent">ดีมาก</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">Excellent</div>
-															</div>
-															<div class="form-check mb-0">
-																<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_skill" id="other_lang_good" value="good">
-																<label class="form-check-label fw-bold text-white" for="other_lang_good">ดี</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">Good</div>
-															</div>
-															<div class="form-check mb-0">
-																<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_skill" id="other_lang_fair" value="fair">
-																<label class="form-check-label fw-bold text-white" for="other_lang_fair">พอใช้</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
-															</div>
+											<!-- Row 2: Other Language -->
+											<div class="row mb-3 align-items-center">
+												<div class="col-md-4">
+													<div class="fw-bold text-white">ภาษาอื่นๆ (ระบุ)</div>
+													<div class="text-white" style="font-size: 13px;">Other languages (Please specify)</div>
+												</div>
+												<div class="col-md-8">
+													<div class="d-flex flex-wrap align-items-center gap-3">
+														<!-- ช่องกรอกชื่อภาษา -->
+														<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark me-2" name="other_lang_name" style="width: 150px; background-color: #fdf2fa;">
+
+														<!-- ตัวเลือกระดับความสามารถ -->
+														<div class="form-check mb-0">
+															<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_skill" id="other_lang_excellent" value="excellent">
+															<label class="form-check-label fw-bold text-white" for="other_lang_excellent">ดีมาก</label>
+															<div class="text-white" style="font-size: 13px; line-height: 1;">Excellent</div>
+														</div>
+														<div class="form-check mb-0">
+															<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_skill" id="other_lang_good" value="good">
+															<label class="form-check-label fw-bold text-white" for="other_lang_good">ดี</label>
+															<div class="text-white" style="font-size: 13px; line-height: 1;">Good</div>
+														</div>
+														<div class="form-check mb-0">
+															<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_skill" id="other_lang_fair" value="fair">
+															<label class="form-check-label fw-bold text-white" for="other_lang_fair">พอใช้</label>
+															<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
 														</div>
 													</div>
 												</div>
@@ -854,15 +851,19 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											<hr>
 
 											<!-- Question 2: Health -->
-											<div class="row mb-3 align-items-center">
-												<div class="col-md-12">
-													<div class="d-flex flex-wrap align-items-center gap-4">
-														<div class="me-2">
+											<div class="row mb-3">
+												<div class="col-12 d-flex flex-column gap-3">
+
+													<!-- บรรทัดที่ 1: สุขภาพของท่าน -->
+													<div class="d-flex align-items-center gap-4">
+														<!-- หัวข้อฝั่งซ้าย (กำหนด width ไว้เพื่อให้ตรงกันทุกบรรทัด) -->
+														<div style="min-width: 300px;">
 															<div class="fw-bold text-white">สุขภาพของท่าน</div>
 															<div class="text-white" style="font-size: 13px;">Your health</div>
 														</div>
 
-														<div class="d-flex align-items-start gap-3 me-3">
+														<!-- ตัวเลือกฝั่งขวา -->
+														<div class="d-flex align-items-center gap-4">
 															<div class="form-check mb-0">
 																<input class="form-check-input shadow-none border-secondary" type="radio" name="health_status" id="health_excellent" value="excellent" checked>
 																<label class="form-check-label fw-bold text-white" for="health_excellent">ดีมาก</label>
@@ -874,27 +875,37 @@ defined('BASEPATH') or exit('No direct script access allowed');
 																<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
 															</div>
 														</div>
+													</div>
 
-														<div class="me-2 text-nowrap">
+													<!-- บรรทัดที่ 2: ท่านมีโรคประจำตัวหรือไม่ -->
+													<div class="d-flex align-items-center gap-4">
+														<!-- หัวข้อฝั่งซ้าย (ความกว้างเท่ากับบรรทัดแรก ทำให้ขนานกันพอดี) -->
+														<div style="min-width: 300px;">
 															<div class="fw-bold text-white">ท่านมีโรคประจำตัวหรือไม่ ถ้ามี กรุณาระบุ</div>
 															<div class="text-white" style="font-size: 13px;">Do you suffer from any prolonged illness?</div>
 														</div>
 
-														<div class="d-flex align-items-start">
-															<div class="form-check mb-0 me-2">
-																<input class="form-check-input shadow-none border-secondary" type="radio" name="illness" id="illness_yes" value="yes">
-																<label class="form-check-label fw-bold text-white" for="illness_yes">มี โปรดระบุ</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">If "Yes", please specify</div>
+														<!-- ตัวเลือกฝั่งขวา -->
+														<div class="d-flex align-items-center gap-3">
+															<!-- ตัวเลือก: มี โปรดระบุ + ช่องกรอก -->
+															<div class="d-flex align-items-center">
+																<div class="form-check mb-0 me-2">
+																	<input class="form-check-input shadow-none border-secondary" type="radio" name="illness" id="illness_yes" value="yes">
+																	<label class="form-check-label fw-bold text-white" for="illness_yes">มี โปรดระบุ</label>
+																	<div class="text-white" style="font-size: 13px; line-height: 1;">If "Yes", please specify</div>
+																</div>
+																<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark ms-1" name="illness_specify" style="width: 180px; background-color: #efefef;">
 															</div>
-															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="illness_specify" style="width: 200px; background-color: #efefef;">
-														</div>
 
-														<div class="form-check mb-0 ms-2">
-															<input class="form-check-input shadow-none border-secondary" type="radio" name="illness" id="illness_no" value="no" checked>
-															<label class="form-check-label fw-bold text-white" for="illness_no">ไม่มี</label>
-															<div class="text-white" style="font-size: 13px; line-height: 1;">No.</div>
+															<!-- ตัวเลือก: ไม่มี -->
+															<div class="form-check mb-0 ms-2">
+																<input class="form-check-input shadow-none border-secondary" type="radio" name="illness" id="illness_no" value="no" checked>
+																<label class="form-check-label fw-bold text-white" for="illness_no">ไม่มี</label>
+																<div class="text-white" style="font-size: 13px; line-height: 1;">No.</div>
+															</div>
 														</div>
 													</div>
+
 												</div>
 											</div>
 											<hr>
@@ -923,16 +934,25 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</fieldset>
 
 										<fieldset class="wizard-step d-none" data-step="8">
-											<h2 class="h5 mb-3">แนบเอกสารและข้อตกลง (Attach the documents and agreement.) </h2><hr>
+											<h2 class="h5 mb-3">แนบเอกสารและข้อตกลง (Attach the documents and agreement.) </h2>
+											<hr>
 											<dl class="row mb-3" id="wz-summary"></dl>
 											<div class="form-check">
-												<small>ข้าพเจ้าขอรับรองว่า ข้อความดังกล่าวทั้งหมดในใบสมัครนี้เป็นความจริงทุกประการ หากหลังจากบริษัทฯจ้างเข้ามาทำงานตรวจสอบเอกสารที่นำมาสมัครงานไม่เป็นความจริง และไม่ปฏิบัติตามกฎระเบียบของบริษัท ทางบริษัทมีสิทธิเลิกจ้างข้าพเจ้าโดยไม่ต้องจ่ายเงินชดเชย หรือค่าเสียหายใดๆ ทั้งสิ้น</small><br><hr>
-												<small>I certify the information contained in this application is true. Any misrepresentation or omissions of any fact in my application can be justification for refusal of employment or for refusal of employment or if employed grounds for termination. I understand that my employment may be terminated with or without cause or notice, at any time, at the option of either the Company or myself.</small><hr>
-												<input class="form-check-input" type="checkbox" id="wz-terms" required />
-												<label class="form-check-label" for="wz-terms">
-													I agree to the <a href="#">terms of service</a>.
-												</label>
-												<div class="invalid-feedback">You must accept the terms to continue.</div>
+												<small>ข้าพเจ้าขอรับรองว่า ข้อความดังกล่าวทั้งหมดในใบสมัครนี้เป็นความจริงทุกประการ หากหลังจากบริษัทฯจ้างเข้ามาทำงานตรวจสอบเอกสารที่นำมาสมัครงานไม่เป็นความจริง และไม่ปฏิบัติตามกฎระเบียบของบริษัท ทางบริษัทมีสิทธิเลิกจ้างข้าพเจ้าโดยไม่ต้องจ่ายเงินชดเชย หรือค่าเสียหายใดๆ ทั้งสิ้น</small><br>
+												<hr>
+												<small>I certify the information contained in this application is true. Any misrepresentation or omissions of any fact in my application can be justification for refusal of employment or for refusal of employment or if employed grounds for termination. I understand that my employment may be terminated with or without cause or notice, at any time, at the option of either the Company or myself.</small>
+												<hr>
+												<div class="row">
+													<div class="col-md-12">
+														<input type="file" class="form-control" id="inputGroupFile02">
+													</div>
+													<div class="col-md-12 mt-2">
+														<input class="form-check-input" type="checkbox" id="wz-terms" required />
+														<label class="form-check-label" for="wz-terms">
+															I agree to the <a href="#">terms of service</a>.
+														</label>
+														<div class="invalid-feedback">You must accept the terms to continue.</div>
+												</div>
 											</div>
 										</fieldset>
 
