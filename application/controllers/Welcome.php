@@ -20,6 +20,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+		$this->load->view('home');
+	}
+	public function applicationform()
+	{
 		$this->load->view('applicationform');
 	}
 }

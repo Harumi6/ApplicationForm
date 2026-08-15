@@ -56,17 +56,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!--end::Fonts-->
 
 	<!--begin::Third Party Plugin(OverlayScrollbars)-->
-	<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css"
-		crossorigin="anonymous" />
+	<link rel="stylesheet" href="<?= base_url('assets/css/overlayscrollbars.min.css') ?>" />
 	<!--end::Third Party Plugin(OverlayScrollbars)-->
 
 	<!--begin::Third Party Plugin(Bootstrap Icons)-->
-	<link
-		rel="stylesheet"
-		href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-		crossorigin="anonymous" />
+	<link rel="stylesheet" href="<?= base_url('assets/css/bootstrap-icons.min.css') ?>" />
 	<!--end::Third Party Plugin(Bootstrap Icons)-->
 
 	<!--begin::Required Plugin(AdminLTE)-->
@@ -650,34 +644,34 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</fieldset>
 
 										<fieldset class="wizard-step d-none" data-step="6">
-											<h2 class="h5 mb-3 text-white">ความสามารถ / Ability</h2>
+											<h2 class="h5 mb-3">ความสามารถ / Ability</h2>
 											<hr>
 
 											<!-- Row 1: Computer -->
 											<div class="row mb-3">
 												<div class="col-md-4">
-													<div class="fw-bold text-white">ความสามารถทางคอมฯ โปรแกรม</div>
-													<div class="text-white" style="font-size: 13px;">Computer skill</div>
+													<div class="fw-bold">ความสามารถทางคอมฯ โปรแกรม</div>
+													<div style="font-size: 13px;">Computer skill</div>
 												</div>
 												<div class="col-md-8">
 													<div class="d-flex flex-wrap align-items-start gap-3">
 														<div class="form-check mb-0">
 															<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="comp_word" id="comp_word">
-															<label class="form-check-label fw-bold text-white" for="comp_word">Ms.Word</label>
+															<label class="form-check-label fw-bold" for="comp_word">Ms.Word</label>
 														</div>
 														<div class="form-check mb-0">
 															<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="comp_excel" id="comp_excel">
-															<label class="form-check-label fw-bold text-white" for="comp_excel">Ms.Excel</label>
+															<label class="form-check-label fw-bold" for="comp_excel">Ms.Excel</label>
 														</div>
 														<div class="form-check mb-0">
 															<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="comp_powerpoint" id="comp_powerpoint">
-															<label class="form-check-label fw-bold text-white" for="comp_powerpoint">Ms.Power Point</label>
+															<label class="form-check-label fw-bold" for="comp_powerpoint">Ms.Power Point</label>
 														</div>
 														<div class="d-flex align-items-start">
 															<div class="form-check mb-0 me-2">
 																<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="comp_other_check" id="comp_other_check">
-																<label class="form-check-label fw-bold text-white" for="comp_other_check">อื่นๆ</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">Others</div>
+																<label class="form-check-label fw-bold" for="comp_other_check">อื่นๆ</label>
+																<div style="font-size: 13px; line-height: 1;">Others</div>
 															</div>
 															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="comp_other" style="width: 250px; background-color: #efefef; ">
 														</div>
@@ -689,25 +683,25 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											<!-- Row 2: English -->
 											<div class="row mb-3 align-items-center">
 												<div class="col-md-4">
-													<div class="fw-bold text-white">ความสามารถทางภาษาอังกฤษ</div>
-													<div class="text-white" style="font-size: 13px;">English skill</div>
+													<div class="fw-bold">ความสามารถทางภาษาอังกฤษ</div>
+													<div style="font-size: 13px;">English skill</div>
 												</div>
 												<div class="col-md-8">
 													<div class="d-flex align-items-center gap-4">
 														<div class="form-check mb-0">
 															<input class="form-check-input shadow-none border-secondary" type="radio" name="eng_skill" id="eng_excellent" value="excellent" checked>
-															<label class="form-check-label fw-bold text-white" for="eng_excellent">ดีมาก</label>
-															<div class="text-white" style="font-size: 13px; line-height: 1;">Excellent</div>
+															<label class="form-check-label fw-bold" for="eng_excellent">ดีมาก</label>
+															<div style="font-size: 13px; line-height: 1;">Excellent</div>
 														</div>
 														<div class="form-check mb-0">
 															<input class="form-check-input shadow-none border-secondary" type="radio" name="eng_skill" id="eng_good" value="good">
-															<label class="form-check-label fw-bold text-white" for="eng_good">ดี</label>
-															<div class="text-white" style="font-size: 13px; line-height: 1;">Good</div>
+															<label class="form-check-label fw-bold" for="eng_good">ดี</label>
+															<div style="font-size: 13px; line-height: 1;">Good</div>
 														</div>
 														<div class="form-check mb-0">
 															<input class="form-check-input shadow-none border-secondary" type="radio" name="eng_skill" id="eng_fair" value="fair">
-															<label class="form-check-label fw-bold text-white" for="eng_fair">พอใช้</label>
-															<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
+															<label class="form-check-label fw-bold" for="eng_fair">พอใช้</label>
+															<div style="font-size: 13px; line-height: 1;">Fair</div>
 														</div>
 													</div>
 												</div>
@@ -716,8 +710,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											<!-- Row 2: Other Language -->
 											<div class="row mb-3 align-items-center">
 												<div class="col-md-4">
-													<div class="fw-bold text-white">ภาษาอื่นๆ (ระบุ)</div>
-													<div class="text-white" style="font-size: 13px;">Other languages (Please specify)</div>
+													<div class="fw-bold">ภาษาอื่นๆ (ระบุ)</div>
+													<div style="font-size: 13px;">Other languages (Please specify)</div>
 												</div>
 												<div class="col-md-8">
 													<div class="d-flex flex-wrap align-items-center gap-3">
@@ -727,18 +721,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
 														<!-- ตัวเลือกระดับความสามารถ -->
 														<div class="form-check mb-0">
 															<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_skill" id="other_lang_excellent" value="excellent">
-															<label class="form-check-label fw-bold text-white" for="other_lang_excellent">ดีมาก</label>
-															<div class="text-white" style="font-size: 13px; line-height: 1;">Excellent</div>
+															<label class="form-check-label fw-bold" for="other_lang_excellent">ดีมาก</label>
+															<div style="font-size: 13px; line-height: 1;">Excellent</div>
 														</div>
 														<div class="form-check mb-0">
 															<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_skill" id="other_lang_good" value="good">
-															<label class="form-check-label fw-bold text-white" for="other_lang_good">ดี</label>
-															<div class="text-white" style="font-size: 13px; line-height: 1;">Good</div>
+															<label class="form-check-label fw-bold" for="other_lang_good">ดี</label>
+															<div style="font-size: 13px; line-height: 1;">Good</div>
 														</div>
 														<div class="form-check mb-0">
 															<input class="form-check-input shadow-none border-secondary" type="radio" name="other_lang_skill" id="other_lang_fair" value="fair">
-															<label class="form-check-label fw-bold text-white" for="other_lang_fair">พอใช้</label>
-															<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
+															<label class="form-check-label fw-bold" for="other_lang_fair">พอใช้</label>
+															<div style="font-size: 13px; line-height: 1;">Fair</div>
 														</div>
 													</div>
 												</div>
@@ -748,28 +742,28 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											<!-- Row 3: Driving -->
 											<div class="row mb-3">
 												<div class="col-md-3">
-													<div class="fw-bold text-white">ความสามารถในการขับขี่</div>
-													<div class="text-white" style="font-size: 13px;">Driving ability</div>
+													<div class="fw-bold">ความสามารถในการขับขี่</div>
+													<div style="font-size: 13px;">Driving ability</div>
 												</div>
 												<div class="col-md-9">
 													<div class="d-flex flex-wrap align-items-start gap-4">
 														<div class="d-flex align-items-start gap-3">
 															<div class="form-check mb-0">
 																<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="drive_car" id="drive_car">
-																<label class="form-check-label fw-bold text-white" for="drive_car">รถยนต์</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">Car</div>
+																<label class="form-check-label fw-bold" for="drive_car">รถยนต์</label>
+																<div style="font-size: 13px; line-height: 1;">Car</div>
 															</div>
 															<div class="form-check mb-0">
 																<input class="form-check-input rounded-1 shadow-none border-secondary" type="checkbox" name="drive_motorcycle" id="drive_motorcycle">
-																<label class="form-check-label fw-bold text-white" for="drive_motorcycle">รถจักรยานยนต์</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">Motorcycle</div>
+																<label class="form-check-label fw-bold" for="drive_motorcycle">รถจักรยานยนต์</label>
+																<div style="font-size: 13px; line-height: 1;">Motorcycle</div>
 															</div>
 														</div>
 
 														<div class="d-flex align-items-start">
 															<div class="me-2 text-nowrap">
-																<div class="fw-bold text-white">อื่นๆ</div>
-																<div class="text-white" style="font-size: 13px;">Other</div>
+																<div class="fw-bold">อื่นๆ</div>
+																<div style="font-size: 13px;">Other</div>
 															</div>
 															<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark" name="drive_other" style="width: 180px; background-color: #fdf2fa;">
 														</div>
@@ -780,25 +774,25 @@ defined('BASEPATH') or exit('No direct script access allowed');
 										</fieldset>
 
 										<fieldset class="wizard-step d-none" data-step="7">
-											<h2 class="h5 mb-3 text-white">ข้อมูลอื่นๆ / Other Information</h2>
+											<h2 class="h5 mb-3">ข้อมูลอื่นๆ / Other Information</h2>
 
 											<!-- Question 1 -->
 											<div class="row mb-3 align-items-center">
 												<div class="col-md-7">
-													<div class="fw-bold text-white">ท่านเคยผ่านการสัมภาษณ์งานในกลุ่มบริษัทไอชิน ทาคาโอกะ (ประเทศไทย) จำกัดหรือไม่</div>
-													<div class="text-white" style="font-size: 13px;">Have you ever been interviewed with company in AISIN group before?</div>
+													<div class="fw-bold">ท่านเคยผ่านการสัมภาษณ์งานในกลุ่มบริษัทไอชิน ทาคาโอกะ (ประเทศไทย) จำกัดหรือไม่</div>
+													<div style="font-size: 13px;">Have you ever been interviewed with company in AISIN group before?</div>
 												</div>
 												<div class="col-md-5">
 													<div class="d-flex flex-wrap align-items-center gap-4 mt-2 mt-md-0">
 														<div class="form-check mb-0">
 															<input class="form-check-input shadow-none border-secondary" type="radio" name="aisin_interview" id="aisin_yes" value="yes">
-															<label class="form-check-label fw-bold text-white" for="aisin_yes">เคย โปรดระบุ</label>
-															<div class="text-white" style="font-size: 13px; line-height: 1;">Yes (Please specify)</div>
+															<label class="form-check-label fw-bold" for="aisin_yes">เคย โปรดระบุ</label>
+															<div style="font-size: 13px; line-height: 1;">Yes (Please specify)</div>
 														</div>
 														<div class="form-check mb-0">
 															<input class="form-check-input shadow-none border-secondary" type="radio" name="aisin_interview" id="aisin_no" value="no" checked>
-															<label class="form-check-label fw-bold text-white" for="aisin_no">ไม่เคย</label>
-															<div class="text-white" style="font-size: 13px; line-height: 1;">No</div>
+															<label class="form-check-label fw-bold" for="aisin_no">ไม่เคย</label>
+															<div style="font-size: 13px; line-height: 1;">No</div>
 														</div>
 													</div>
 												</div>
@@ -810,21 +804,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 													<div class="d-flex flex-wrap align-items-center gap-4">
 														<div class="form-check d-flex align-items-center mb-0">
 															<input class="form-check-input shadow-none border-secondary mt-0 me-2" type="checkbox" name="company_tep" id="company_tep">
-															<label class="form-check-label text-white d-flex align-items-center" for="company_tep">
+															<label class="form-check-label d-flex align-items-center" for="company_tep">
 																บริษัท ผลิตภัณฑ์วิศวไทย จำกัด
 																<img src="<?= base_url('assets/images/tep.png') ?>" alt="TEP" height="24" class="ms-2">
 															</label>
 														</div>
 														<div class="form-check d-flex align-items-center mb-0">
 															<input class="form-check-input shadow-none border-secondary mt-0 me-2" type="checkbox" name="company_snf" id="company_snf">
-															<label class="form-check-label text-white d-flex align-items-center" for="company_snf">
+															<label class="form-check-label d-flex align-items-center" for="company_snf">
 																บริษัท นวโลหะไทย จำกัด
 																<img src="<?= base_url('assets/images/snf.png') ?>" alt="SNF" height="24" class="ms-2">
 															</label>
 														</div>
 														<div class="form-check d-flex align-items-center mb-0">
 															<input class="form-check-input shadow-none border-secondary mt-0 me-2" type="checkbox" name="company_nic" id="company_nic">
-															<label class="form-check-label text-white d-flex align-items-center" for="company_nic">
+															<label class="form-check-label d-flex align-items-center" for="company_nic">
 																บริษัท นวโลหะอุตสาหกรรม จำกัด
 																<img src="<?= base_url('assets/images/nic.png') ?>" alt="NIC" height="24" class="ms-2">
 															</label>
@@ -833,14 +827,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
 													<div class="d-flex flex-wrap align-items-center gap-4 mt-3">
 														<div class="form-check d-flex align-items-center mb-0">
 															<input class="form-check-input shadow-none border-secondary mt-0 me-2" type="checkbox" name="company_sati" id="company_sati">
-															<label class="form-check-label text-white d-flex align-items-center" for="company_sati">
+															<label class="form-check-label d-flex align-items-center" for="company_sati">
 																บริษัท สยาม เอที อุตสาหกรรม จำกัด
 																<img src="<?= base_url('assets/images/sati.png') ?>" alt="SATI" height="24" class="ms-2">
 															</label>
 														</div>
 														<div class="form-check d-flex align-items-center mb-0">
 															<input class="form-check-input shadow-none border-secondary mt-0 me-2" type="checkbox" name="company_atfb" id="company_atfb">
-															<label class="form-check-label text-white d-flex align-items-center" for="company_atfb">
+															<label class="form-check-label d-flex align-items-center" for="company_atfb">
 																บริษัท ไอชิน ทาคาโอก้า ฟาวดริ บางปะกง จำกัด
 																<img src="<?= base_url('assets/images/atfb.png') ?>" alt="ATFB" height="24" class="ms-2">
 															</label>
@@ -858,21 +852,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
 													<div class="d-flex align-items-center gap-4">
 														<!-- หัวข้อฝั่งซ้าย (กำหนด width ไว้เพื่อให้ตรงกันทุกบรรทัด) -->
 														<div style="min-width: 300px;">
-															<div class="fw-bold text-white">สุขภาพของท่าน</div>
-															<div class="text-white" style="font-size: 13px;">Your health</div>
+															<div class="fw-bold">สุขภาพของท่าน</div>
+															<div style="font-size: 13px;">Your health</div>
 														</div>
 
 														<!-- ตัวเลือกฝั่งขวา -->
 														<div class="d-flex align-items-center gap-4">
 															<div class="form-check mb-0">
 																<input class="form-check-input shadow-none border-secondary" type="radio" name="health_status" id="health_excellent" value="excellent" checked>
-																<label class="form-check-label fw-bold text-white" for="health_excellent">ดีมาก</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">Excellent</div>
+																<label class="form-check-label fw-bold" for="health_excellent">ดีมาก</label>
+																<div style="font-size: 13px; line-height: 1;">Excellent</div>
 															</div>
 															<div class="form-check mb-0">
 																<input class="form-check-input shadow-none border-secondary" type="radio" name="health_status" id="health_fair" value="fair">
-																<label class="form-check-label fw-bold text-white" for="health_fair">พอใช้</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">Fair</div>
+																<label class="form-check-label fw-bold" for="health_fair">พอใช้</label>
+																<div style="font-size: 13px; line-height: 1;">Fair</div>
 															</div>
 														</div>
 													</div>
@@ -881,8 +875,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 													<div class="d-flex align-items-center gap-4">
 														<!-- หัวข้อฝั่งซ้าย (ความกว้างเท่ากับบรรทัดแรก ทำให้ขนานกันพอดี) -->
 														<div style="min-width: 300px;">
-															<div class="fw-bold text-white">ท่านมีโรคประจำตัวหรือไม่ ถ้ามี กรุณาระบุ</div>
-															<div class="text-white" style="font-size: 13px;">Do you suffer from any prolonged illness?</div>
+															<div class="fw-bold">ท่านมีโรคประจำตัวหรือไม่ ถ้ามี กรุณาระบุ</div>
+															<div style="font-size: 13px;">Do you suffer from any prolonged illness?</div>
 														</div>
 
 														<!-- ตัวเลือกฝั่งขวา -->
@@ -891,8 +885,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 															<div class="d-flex align-items-center">
 																<div class="form-check mb-0 me-2">
 																	<input class="form-check-input shadow-none border-secondary" type="radio" name="illness" id="illness_yes" value="yes">
-																	<label class="form-check-label fw-bold text-white" for="illness_yes">มี โปรดระบุ</label>
-																	<div class="text-white" style="font-size: 13px; line-height: 1;">If "Yes", please specify</div>
+																	<label class="form-check-label fw-bold" for="illness_yes">มี โปรดระบุ</label>
+																	<div style="font-size: 13px; line-height: 1;">If "Yes", please specify</div>
 																</div>
 																<input type="text" class="form-control form-control-sm rounded-0 shadow-none border-secondary text-dark ms-1" name="illness_specify" style="width: 180px; background-color: #efefef;">
 															</div>
@@ -900,8 +894,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 															<!-- ตัวเลือก: ไม่มี -->
 															<div class="form-check mb-0 ms-2">
 																<input class="form-check-input shadow-none border-secondary" type="radio" name="illness" id="illness_no" value="no" checked>
-																<label class="form-check-label fw-bold text-white" for="illness_no">ไม่มี</label>
-																<div class="text-white" style="font-size: 13px; line-height: 1;">No.</div>
+																<label class="form-check-label fw-bold" for="illness_no">ไม่มี</label>
+																<div style="font-size: 13px; line-height: 1;">No.</div>
 															</div>
 														</div>
 													</div>
@@ -913,20 +907,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
 											<!-- Question 3: Crime -->
 											<div class="row mb-3 align-items-center">
 												<div class="col-md-8">
-													<div class="fw-bold text-white">ท่านเคยถูกจับหรือเคยต้องคดีอาญาหรือคดีเกี่ยวกับการลักขโมยหรือฉ้อโกงหรือไม่</div>
-													<div class="text-white" style="font-size: 13px;">Have you ever been arrested or charged by the Police Department for involvement in any theft of fraud?</div>
+													<div class="fw-bold">ท่านเคยถูกจับหรือเคยต้องคดีอาญาหรือคดีเกี่ยวกับการลักขโมยหรือฉ้อโกงหรือไม่</div>
+													<div style="font-size: 13px;">Have you ever been arrested or charged by the Police Department for involvement in any theft of fraud?</div>
 												</div>
 												<div class="col-md-4">
 													<div class="d-flex flex-wrap align-items-center gap-4 mt-2 mt-md-0">
 														<div class="form-check mb-0">
 															<input class="form-check-input shadow-none border-secondary" type="radio" name="crime_record" id="crime_yes" value="yes">
-															<label class="form-check-label fw-bold text-white" for="crime_yes">เคย</label>
-															<div class="text-white" style="font-size: 13px; line-height: 1;">Yes</div>
+															<label class="form-check-label fw-bold" for="crime_yes">เคย</label>
+															<div style="font-size: 13px; line-height: 1;">Yes</div>
 														</div>
 														<div class="form-check mb-0">
 															<input class="form-check-input shadow-none border-secondary" type="radio" name="crime_record" id="crime_no" value="no" checked>
-															<label class="form-check-label fw-bold text-white" for="crime_no">ไม่เคย</label>
-															<div class="text-white" style="font-size: 13px; line-height: 1;">No</div>
+															<label class="form-check-label fw-bold" for="crime_no">ไม่เคย</label>
+															<div style="font-size: 13px; line-height: 1;">No</div>
 														</div>
 													</div>
 												</div>
@@ -943,8 +937,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 												<small>I certify the information contained in this application is true. Any misrepresentation or omissions of any fact in my application can be justification for refusal of employment or for refusal of employment or if employed grounds for termination. I understand that my employment may be terminated with or without cause or notice, at any time, at the option of either the Company or myself.</small>
 												<hr>
 												<div class="row">
-													<div class="col-md-12">
-														<input type="file" class="form-control" id="inputGroupFile02">
+													<div class="col-md-12 mb-3">
+														<label class="form-check-label fw-bold" for="inputGroupFile02">แนบเอกสาร</label>
+														<input type="file" class="form-control" id="inputGroupFile02" multiple>
 													</div>
 													<div class="col-md-12 mt-2">
 														<input class="form-check-input" type="checkbox" id="wz-terms" required />
@@ -952,8 +947,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 															I agree to the <a href="#">terms of service</a>.
 														</label>
 														<div class="invalid-feedback">You must accept the terms to continue.</div>
+													</div>
 												</div>
-											</div>
 										</fieldset>
 
 										<!-- <fieldset class="wizard-step d-none" data-step="9">
@@ -1008,15 +1003,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	</div>
 
 	<!--begin::Third Party Plugins-->
-	<script
-		src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-		crossorigin="anonymous"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-		crossorigin="anonymous"></script>
+	<script src="<?= base_url('assets/javascript/overlayscrollbars.browser.es6.min.js') ?>"></script>
+	<script src="<?= base_url('assets/javascript/popper.min.js') ?>"></script>
+	<script src="<?= base_url('assets/javascript/bootstrap.min.js') ?>"></script>
 	<script src="<?= base_url('assets/javascript/adminlte.js') ?>"></script>
 	<!--end::Third Party Plugins-->
 
