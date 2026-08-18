@@ -4,152 +4,94 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="icon" href="<?= base_url('assets/images/logo.png') ?>" type="image/x-icon">
-	<title>Application Form</title>
+<!--begin::Head-->
+<?php 
+$wizard_css = '
+<style>
+	.wizard-steps {
+		counter-reset: step;
+		list-style: none;
+		padding: 0;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+	}
 
-	<!--begin::Theme Init (prevents flash of incorrect theme on load)-->
-	<script>
-		(() => {
-			'use strict';
-			const STORAGE_KEY = 'lte-theme';
-			let stored = null;
-			try {
-				stored = localStorage.getItem(STORAGE_KEY);
-			} catch {
-				// localStorage may be unavailable (private mode, sandboxed iframe).
-			}
-			const prefersDark = globalThis.matchMedia('(prefers-color-scheme: dark)').matches;
-			let resolved = 'light';
-			if (stored === 'dark' || stored === 'light') {
-				resolved = stored;
-			} else if (prefersDark) {
-				resolved = 'dark';
-			}
-			document.documentElement.setAttribute('data-bs-theme', resolved);
-			document.documentElement.style.colorScheme = resolved;
-		})();
-	</script>
-	<!--end::Theme Init-->
+	.wizard-steps::before {
+		content: "";
+		position: absolute;
+		top: 1rem;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background: var(--bs-border-color);
+		z-index: 0;
+	}
 
-	<!--begin::Accessibility Meta Tags-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-	<meta name="color-scheme" content="light dark" />
-	<meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)" />
-	<meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
-	<!--end::Accessibility Meta Tags-->
+	.wizard-steps li {
+		position: relative;
+		z-index: 1;
+		background: var(--bs-body-bg);
+		padding: 0 0.75rem;
+		text-align: center;
+		color: var(--bs-secondary-color);
+		font-size: 0.875rem;
+	}
 
-	<!--begin::Primary Meta Tags-->
-	<meta name="title" content="Application Form" />
-	<!--end::Primary Meta Tags-->
+	.wizard-steps li::before {
+		counter-increment: step;
+		content: counter(step);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 2rem;
+		height: 2rem;
+		margin: 0 auto 0.5rem;
+		border-radius: 50%;
+		background: var(--bs-body-tertiary-bg);
+		border: 2px solid var(--bs-border-color);
+		color: var(--bs-secondary-color);
+		font-weight: 600;
+	}
 
-	<!--begin::Accessibility Features-->
-	<meta name="supported-color-schemes" content="light dark" />
-	<link rel="preload" href="<?= base_url('assets/css/adminlte.css') ?>" as="style" />
-	<!--end::Accessibility Features-->
+	.wizard-steps li.active {
+		color: var(--bs-primary);
+		font-weight: 600;
+	}
 
-	<!--begin::Fonts-->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-	<!--end::Fonts-->
+	.wizard-steps li.active::before {
+		background: var(--bs-primary);
+		border-color: var(--bs-primary);
+		color: #fff;
+	}
 
-	<!--begin::Third Party Plugin(OverlayScrollbars)-->
-	<link rel="stylesheet" href="<?= base_url('assets/css/overlayscrollbars.min.css') ?>" />
-	<!--end::Third Party Plugin(OverlayScrollbars)-->
+	.wizard-steps li.completed::before {
+		background: var(--bs-success);
+		border-color: var(--bs-success);
+		color: #fff;
+		content: "\f633";
+		font-family: "bootstrap-icons";
+	}
+</style>';
 
-	<!--begin::Third Party Plugin(Bootstrap Icons)-->
-	<link rel="stylesheet" href="<?= base_url('assets/css/bootstrap-icons.min.css') ?>" />
-	<!--end::Third Party Plugin(Bootstrap Icons)-->
+$this->load->view('components/head', [
+	'title' => 'Application Form - แบบฟอร์มสมัครงาน',
+	'extra_head' => $wizard_css
+]);
+?>
+<!--end::Head-->
 
-	<!--begin::Required Plugin(AdminLTE)-->
-	<link rel="stylesheet" href="<?= base_url('assets/css/adminlte.css') ?>" />
-	<!--end::Required Plugin(AdminLTE)-->
-
-	<style>
-		body,
-		.form-control,
-		.form-select,
-		.btn,
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			font-family: 'Google Sans', 'Noto Sans Thai', sans-serif !important;
-		}
-
-		.wizard-steps {
-			counter-reset: step;
-			list-style: none;
-			padding: 0;
-			display: flex;
-			justify-content: space-between;
-			position: relative;
-		}
-
-		.wizard-steps::before {
-			content: '';
-			position: absolute;
-			top: 1rem;
-			left: 0;
-			right: 0;
-			height: 2px;
-			background: var(--bs-border-color);
-			z-index: 0;
-		}
-
-		.wizard-steps li {
-			position: relative;
-			z-index: 1;
-			background: var(--bs-body-bg);
-			padding: 0 0.75rem;
-			text-align: center;
-			color: var(--bs-secondary-color);
-			font-size: 0.875rem;
-		}
-
-		.wizard-steps li::before {
-			counter-increment: step;
-			content: counter(step);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 2rem;
-			height: 2rem;
-			margin: 0 auto 0.5rem;
-			border-radius: 50%;
-			background: var(--bs-body-tertiary-bg);
-			border: 2px solid var(--bs-border-color);
-			color: var(--bs-secondary-color);
-			font-weight: 600;
-		}
-
-		.wizard-steps li.active {
-			color: var(--bs-primary);
-			font-weight: 600;
-		}
-
-		.wizard-steps li.active::before {
-			background: var(--bs-primary);
-			border-color: var(--bs-primary);
-			color: #fff;
-		}
-
-		.wizard-steps li.completed::before {
-			background: var(--bs-success);
-			border-color: var(--bs-success);
-			color: #fff;
-			content: '\f633';
-			font-family: 'bootstrap-icons';
-		}
-	</style>
-</head>
-
-<body class="fixed-footer bg-body-tertiary">
+<body class="layout-fixed fixed-header fixed-footer bg-body-tertiary">
 	<div class="app-wrapper">
+		<!--begin::Header Navbar-->
+		<?php 
+		$this->load->view('components/navbar', [
+			'back_url'       => site_url('welcome/index'),
+			'back_text'      => 'หน้าแรก',
+			'show_apply_btn' => false
+		]); 
+		?>
+		<!--end::Header Navbar-->
 		<!--begin::Main Content-->
 		<main class="app-main" style="margin-left: 0;">
 			<div class="app-content" style="padding-top: 3rem;">
@@ -993,49 +935,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
 		<!--end::Main Content-->
 
 		<!--begin::Footer-->
-		<footer class="app-footer">
-			<div class="float-end d-none d-sm-inline"></div>
-			<strong>
-				Copyright &copy; 2026&nbsp; All rights reserved.
-			</strong>
-		</footer>
+		<?php $this->load->view('components/footer'); ?>
 		<!--end::Footer-->
 	</div>
 
-	<!--begin::Third Party Plugins-->
-	<script src="<?= base_url('assets/javascript/overlayscrollbars.browser.es6.min.js') ?>"></script>
-	<script src="<?= base_url('assets/javascript/popper.min.js') ?>"></script>
-	<script src="<?= base_url('assets/javascript/bootstrap.min.js') ?>"></script>
-	<script src="<?= base_url('assets/javascript/adminlte.js') ?>"></script>
-	<!--end::Third Party Plugins-->
-
-	<!--begin::OverlayScrollbars Configure-->
-	<script>
-		const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
-		const Default = {
-			scrollbarTheme: 'os-theme-light',
-			scrollbarAutoHide: 'leave',
-			scrollbarClickScroll: true,
-		};
-		document.addEventListener('DOMContentLoaded', function() {
-			const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
-			const isMobile = window.innerWidth <= 992;
-			if (
-				sidebarWrapper &&
-				OverlayScrollbarsGlobal?.OverlayScrollbars !== undefined &&
-				!isMobile
-			) {
-				OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
-					scrollbars: {
-						theme: Default.scrollbarTheme,
-						autoHide: Default.scrollbarAutoHide,
-						clickScroll: Default.scrollbarClickScroll,
-					},
-				});
-			}
-		});
-	</script>
-	<!--end::OverlayScrollbars Configure-->
+	<!--begin::Scripts-->
+	<?php $this->load->view('components/scripts'); ?>
+	<!--end::Scripts-->
 
 	<!--begin::Wizard Form Logic-->
 	<script>

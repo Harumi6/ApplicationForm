@@ -26,4 +26,8 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('applicationform');
 	}
+	public function job_info()
+	{
+		$this->load->view('job_info');
+	}
 }
